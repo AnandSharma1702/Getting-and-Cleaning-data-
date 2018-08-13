@@ -1,4 +1,4 @@
-Step - 1 Data import and data manipulation###
+###Step - 1 Data import and data manipulation###
 ###Installing/calling required libraries###
 
 > library(dplyr)
@@ -30,6 +30,13 @@ variable_names <- read.table("C:/Users/343565/Desktop/Coursera/Getting and clean
 ### read activity labels###
 
 > activity_labels <- read.table("C:/Users/343565/Desktop/Coursera/Getting and cleaning data/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/activity_labels.txt")
+
+#### Data merging ( training and the test sets to create one data set) & Sanity check###
+X_total <- rbind(X_train, X_test)
+
+Y_total <- rbind(Y_train, Y_test)
+
+Subject_total <- rbind(Subject_train, Subject_test)
 
 ###Checking data sanity (Verifying number of rows, columns after merge####
 
